@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="itempane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="747.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.itempagecontroller">
+   <children>
+      <HBox fx:id="hbox" alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="747.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="searchtext" prefHeight="17.0" prefWidth="194.0">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </JFXTextField>
+            <JFXButton fx:id="searchbtn" onAction="#searchpress" text="Search">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_icon-ios7-search-strong_211817.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets right="50.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+      <JFXTreeTableView fx:id="itemlist" layoutY="90.0" prefHeight="444.0" prefWidth="747.0" stylesheets="@design.css" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+   </children>
+</AnchorPane>

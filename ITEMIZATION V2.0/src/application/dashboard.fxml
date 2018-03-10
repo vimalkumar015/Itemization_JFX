@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="basepan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.dashboardcontroller">
+   <left>
+      <AnchorPane prefHeight="564.0" prefWidth="243.0" style="-fx-background-color: #494848;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="9.0" layoutY="7.0" text="Navigation" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="home" alignment="BASELINE_LEFT" graphicTextGap="8.0" layoutX="1.0" layoutY="50.0" onAction="#homepress" prefHeight="30.0" prefWidth="240.0" ripplerFill="WHITE" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_home_126572.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="item_master" alignment="BOTTOM_LEFT" graphicTextGap="6.0" layoutX="1.0" layoutY="80.0" onAction="#itempress" prefHeight="31.0" prefWidth="240.0" text="Item Master" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_Menu_List_Text_Line_Item_Bullet_Paragraph_1654364.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="location_master" alignment="BOTTOM_LEFT" graphicTextGap="6.0" layoutX="1.0" layoutY="111.0" prefHeight="31.0" prefWidth="240.0" text="Location Master" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/locationpin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="sales_and_purchase_master" alignment="BOTTOM_LEFT" graphicTextGap="6.0" layoutX="2.0" layoutY="142.0" prefHeight="31.0" prefWidth="240.0" text="Sales and Purchase Master" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_analytics_1954530.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="report_master" alignment="BOTTOM_LEFT" graphicTextGap="6.0" layoutX="2.0" layoutY="173.0" prefHeight="31.0" prefWidth="240.0" text="Report Master" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_icon-45-note-list_315263.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="users_manager" alignment="BOTTOM_LEFT" graphicTextGap="6.0" layoutX="2.0" layoutY="204.0" prefHeight="25.0" prefWidth="240.0" text="Users Manager" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_users_2561497.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="42.0" prefWidth="807.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="3.0" layoutY="4.0" prefHeight="37.0" prefWidth="983.0" spacing="40.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="time">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="logout" fitHeight="19.0" fitWidth="63.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_on-off_42283.png" />
+                     </image>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+            </HBox>
+            <AnchorPane prefHeight="44.0" prefWidth="243.0" style="-fx-background-color: #494848;">
+               <children>
+                  <Label alignment="CENTER" graphicTextGap="7.0" layoutX="14.0" layoutY="6.0" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/edit.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="747.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.homepagecontroller">
+   <children>
+      <TilePane fx:id="tilpane" hgap="50.0" prefHeight="275.0" prefWidth="747.0" vgap="50.0" AnchorPane.bottomAnchor="339.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton fx:id="item" buttonType="RAISED" graphicTextGap="65.0" opacity="0.9" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5cd6cf;" text="Items" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/list.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="sales_and_purchase" alignment="CENTER_RIGHT" buttonType="RAISED" graphicTextGap="50.0" opacity="0.9" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5cd6cf;" text="Sales &amp; Purchase" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="62.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/graph.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="location_master" alignment="CENTER_RIGHT" buttonType="RAISED" graphicTextGap="50.0" opacity="0.9" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5cd6cf;" text="Location Master" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="47.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/location.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="report_master" alignment="CENTER_RIGHT" buttonType="RAISED" graphicTextGap="45.0" opacity="0.9" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5cd6cf;" text="Report Master" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/notes.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="users_manager" alignment="CENTER_RIGHT" buttonType="RAISED" graphicTextGap="55.0" opacity="0.9" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5cd6cf;" text="Users Manager" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/users.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets left="33.0" top="30.0" />
+         </padding>
+      </TilePane>
+      <LineChart fx:id="graph" layoutX="-1.0" layoutY="312.0" prefHeight="272.0" prefWidth="747.0" title="Rate of Sales" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="312.0">
+        <xAxis>
+          <CategoryAxis label="Month" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Total Wight In Grams" side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
