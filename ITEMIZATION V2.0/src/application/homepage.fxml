@@ -15,7 +15,7 @@
    <children>
       <TilePane fx:id="tilpane" hgap="50.0" prefHeight="275.0" prefWidth="747.0" vgap="50.0" AnchorPane.bottomAnchor="339.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXButton fx:id="item" buttonType="RAISED" graphicTextGap="65.0" opacity="0.9" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5cd6cf;" text="Items" wrapText="true">
+            <JFXButton fx:id="item" buttonType="RAISED" graphicTextGap="65.0" onAction="#itempress" opacity="0.9" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #5cd6cf;" text="Items" wrapText="true">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>

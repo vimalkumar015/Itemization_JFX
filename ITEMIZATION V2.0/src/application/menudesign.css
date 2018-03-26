@@ -1,0 +1,19 @@
+.myTree{
+	-fx-font-size : 14px;
+	-fx-background-color : rgb(255,0,128)
+	
+}
+
+.myTree .tree-cell{
+	-fx-background-color :  #494848;
+	-fx-text-fill : #ffffff;
+	-fx-padding : 6px;	
+}
+.myTree .tree-cell:hover {
+	-fx-background-color : grey ;
+}
+.myTree .tree-cell:selected {
+	-fx-font-weight : bold;
+	
+	
+}

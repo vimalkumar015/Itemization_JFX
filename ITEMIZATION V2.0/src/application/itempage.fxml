@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
@@ -11,14 +12,11 @@
 
 <AnchorPane fx:id="itempane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="747.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.itempagecontroller">
    <children>
-      <HBox fx:id="hbox" alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="747.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox fx:id="hbox" alignment="CENTER_LEFT" prefHeight="93.0" prefWidth="747.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXTextField fx:id="searchtext" prefHeight="17.0" prefWidth="194.0">
-               <padding>
-                  <Insets right="20.0" />
-               </padding>
-            </JFXTextField>
-            <JFXButton fx:id="searchbtn" onAction="#searchpress" text="Search">
+            <JFXComboBox fx:id="columncombo" prefHeight="25.0" prefWidth="151.0" promptText="Search Column" />
+            <JFXTextField fx:id="searchtext" onKeyPressed="#searchkeypress" prefHeight="25.0" prefWidth="440.0" />
+            <JFXButton fx:id="searchbtn" onAction="#searchpress" prefHeight="34.0" prefWidth="85.0" text="Search">
                <graphic>
                   <ImageView fitHeight="28.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -32,9 +30,39 @@
             <Insets right="50.0" />
          </opaqueInsets>
          <padding>
-            <Insets right="10.0" />
+            <Insets left="30.0" right="10.0" />
          </padding>
       </HBox>
-      <JFXTreeTableView fx:id="itemlist" layoutY="90.0" prefHeight="444.0" prefWidth="747.0" stylesheets="@design.css" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+      <JFXTreeTableView fx:id="itemlist" layoutX="-6.0" layoutY="93.0" prefHeight="434.0" prefWidth="747.0" stylesheets="@design.css" AnchorPane.bottomAnchor="92.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0" />
+      <HBox alignment="CENTER_LEFT" layoutY="527.0" prefHeight="93.0" prefWidth="747.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#addnewitempress" style="-fx-background-color: #A6A6A6;" text="Add Item">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/if_199_CircledPlus_183316.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </JFXButton>
+            <JFXButton style="-fx-background-color: #A6A6A6;" text="Edit Item">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/editpen.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="25.0" />
+         </padding></HBox>
    </children>
 </AnchorPane>

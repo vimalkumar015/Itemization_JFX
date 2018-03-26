@@ -15,6 +15,7 @@ import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
@@ -72,7 +73,7 @@ public class homepagecontroller implements Initializable{
     @FXML
     private NumberAxis y;
     
-   
+   AnchorPane fxmlLoader;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -120,8 +121,33 @@ public class homepagecontroller implements Initializable{
 		graph.setLayoutY(tilpane.getPrefHeight()+10);
 	}
    
-	
-    
-    
+	@FXML
+	public void itempress()
+	{
+		Thread homethread = new Thread()
+		{
+	public void run()
+	{
+		Platform.runLater(new Runnable()
+				{
 
+					@Override
+					public void run() {
+						try {
+							fxmlLoader = FXMLLoader.load(dashboardcontroller.class.getResource("itempage.fxml"));
+						}catch(Exception e)
+						{
+							e.printStackTrace();
+						}
+						fxmlLoader.setMaxHeight(10000);
+						fxmlLoader.setMaxWidth(10000);
+						dashboardcontroller.bpane.setCenter(fxmlLoader);
+						
+					}
+			
+				});
+	}
+	};
+	homethread.start();
+}
 }

@@ -18,12 +18,14 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 public class logincontroller implements EventHandler<KeyEvent> {
@@ -90,10 +92,12 @@ public class logincontroller implements EventHandler<KeyEvent> {
 						Image logo = new Image("images/itemization_logo.png");
 						stage.getIcons().add(logo);
 						stage.setScene(new Scene(root1));
+						stage.setMaximized(true);
 						stage.show();
 						}catch(Exception ee)
 						{
 							JOptionPane.showMessageDialog(null, "Something Went Wrong");
+							System.out.println("loginpage error");
 							ee.printStackTrace();
 						}
 						main.getPrimaryStage().close();
